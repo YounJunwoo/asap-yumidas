@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Settingbar.css';
+import './SettingBar.css';
 import userRoundPen from "../assets/user-round-pen.svg";
 import globeIcon from "../assets/globe.svg";
 import hardDriveIcon from "../assets/hardDrive.svg";
-import vegeAddIcon from "../assets/VegeAdd.svg";
 
 
-const Settingbar = () => {
+const SettingBar = () => {
   return (
     <div className="settingbar">
       <div className="settingbarTitle">설정</div>
@@ -24,13 +23,9 @@ const Settingbar = () => {
           <Link to="/settingaccount" className="settingbarMenu-btn">
             <img src={hardDriveIcon} alt="계정 관리" className="settingbarIcon" />계정 관리</Link>
         </li>
-        <li>
-          <Link to="/settingadd" className="settingbarMenu-btn">  
-            <img src={vegeAddIcon} alt="작물 추가" className="settingbarIcon" />작물 추가</Link>
-        </li>
       </ul>
     </div>
   );
 };
 
-export default Settingbar;
+export default SettingBar;

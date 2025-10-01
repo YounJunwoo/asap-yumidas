@@ -79,7 +79,7 @@ const Chatting = () => {
 
           <div className="input-area">
             <input
-              className="chat-input"
+              className="chatting-input"
               type="text"
               placeholder="무엇이든 물어보세요"
               value={message}

@@ -1,4 +1,3 @@
-// src/components/Graph.jsx
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -14,7 +13,7 @@ import dayjs from "dayjs";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-function Graph({ data = [], title = "그래프 제목", label = "데이터 라벨", color = "#87ceeB" }) {
+function Graph({ data = [], color = "#87ceeB" }) {
   const labels = data.map((d) =>
 	  dayjs(d.x).format('MM-DD HH:mm')
   );
@@ -22,7 +21,6 @@ function Graph({ data = [], title = "그래프 제목", label = "데이터 라�
     labels,
     datasets: [
       {
-        label: label,
         data: data.map((d) => d.y),
         borderColor: color,
         backgroundColor: color + "80",
@@ -32,18 +30,41 @@ function Graph({ data = [], title = "그래프 제목", label = "데이터 라�
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
-      legend: { position: "top" },
-      title: { display: true, text: title },
+      legend: { display: false },
+      title: { display: false },
+    },
+    scales: {
+      x: {
+        display: true,
+        grid: {
+          display: false,
+        },
+        ticks: {
+          maxTicksLimit: 31,
+        },
+      },
+      y: {
+        display: true,
+        ticks: {
+          padding: 15,
+        },
+      },
+    },
+    elements: {
+      point: {
+        radius: 3,
+        hoverRadius: 5,
+      }
     },
   };
 
   return (
-    <div className="graph">
+    <>
       {data.length > 0 && <Line options={options} data={chartData} />}
-    </div>
+    </>
   );
 }
 
 export default Graph;
-

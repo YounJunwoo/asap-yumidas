@@ -1,14 +1,17 @@
-import React from "react";
-import './Navbar.css';
+import './NavBar.css';
 import hamburger from "../assets/hamburger.svg"
+import { useNavigate } from "react-router-dom";
 
-const Navbar = ({ onToggleSidebar }) => {
-  
+const NavBar = ({ onToggleSidebar }) => {
+  const navigate = useNavigate();
 
+  const toHomepage = () => {
+    navigate("/");
+  };
   return (
     <div className="topNavbar">
       <div className="dashboard-logo">
-        smartfarm <span className="logo-sub">ASAP</span>
+        smartfarm <span className="logo-sub" onClick={toHomepage} style={{ cursor: "pointer" }}>ASAP</span>
       </div>
 
       <button class="hamburger" onClick={onToggleSidebar}>
@@ -18,4 +21,4 @@ const Navbar = ({ onToggleSidebar }) => {
   );
 };
 
-export default Navbar;
+export default NavBar;

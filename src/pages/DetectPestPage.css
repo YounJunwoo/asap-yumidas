@@ -1,0 +1,151 @@
+.detectpest-page{  
+  box-sizing: border-box;
+}
+
+.detectpest-container {
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 25px;
+}
+
+.detectpest-title {
+  background: #00663A;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  border-radius: 10px 10px 0 0;
+
+}
+
+.detectpest-photobox {
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 16 / 7;
+  margin: 20px;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.farm-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-image {
+  font-size: 18px;
+}
+/*어떻게 받을지 몰라 기본적으로 선정함 수정이 필요 */
+.pest-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .detectpest-photobox{
+    aspect-ratio: 4 / 3;
+  }
+  .pest-marker {
+    width: 30px;
+    height: 30px;   
+  }
+}
+
+@media (max-width: 500px) {
+  .no-image {
+    display: none;
+  }
+  .farm-image{
+    aspect-ratio: 4 / 3;
+  }
+  .detectpest-photobox {
+    margin-top:100px;
+    margin-bottom:150px;
+  
+  }
+}
+
+/* === pest popover (small overlay) === */
+.pest-popover {
+  position: absolute;
+  min-width: 220px;
+  max-width: clamp(220px, 30vw, 340px);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  padding: 12px;
+  z-index: 20;
+  transform: translate(-50%, calc(-100% - 16px)); /* 마커 위에 뜨도록 */
+}
+
+.pest-popover:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  border-width: 8px 8px 0 8px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent; /* 꼬리 */
+  filter: drop-shadow(0 -2px 2px rgba(0,0,0,0.08));
+}
+
+.pest-popover__head {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 700; color: #0b4f2f;
+  margin-bottom: 6px;
+}
+
+.pest-popover__thumb {
+  width: 100%; height: auto; object-fit: cover;
+  border-radius: 8px; margin: 8px 0;
+}
+
+.pest-popover__meta {
+  font-size: 12px; color: #444; line-height: 1.4;
+}
+
+.pest-popover__close {
+  position: absolute; top: 6px; right: 8px;
+  background: transparent; border: 0; cursor: pointer;
+  font-size: 18px; line-height: 1; color: #666;
+}
+
+.pest-backdrop {
+  position: absolute; inset: 0;
+  /* 클릭 외부 닫기 위해 투명 배경 */
+  background: transparent;
+  z-index: 15;
+}
+
+/* 작은 화면 최적화 */
+@media (max-width: 600px) {
+  .pest-popover {
+    min-width: 200px;
+    transform: translate(-50%, calc(-100% - 12px));
+    padding: 10px;
+  }
+  .pest-popover__meta { font-size: 11px; }
+}

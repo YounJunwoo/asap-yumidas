@@ -11,17 +11,16 @@ import NavBar from './components/NavBar';
 import SideBar from './components/SideBar';
 import DataStatistics from './pages/DataStatistics';
 import SettingNetwork from './pages/SettingNetwork';
-import SettingAdd from './pages/SettingAdd';
 import Chatting from './pages/Chatting/Chatting';
 import PersonalInformation from './pages/PersonalInformation';
 import useSensorMonitor from './hooks/useSensorMonitor';
+import DetectPestPage from './pages/DetectPestPage';
 
 // 웹페이지 컴포넌트
 import HomePage from './webpage/pages/HomePage';
 import DetailPage from './webpage/pages/DetailPage';
 import SellingPost from './webpage/pages/SellingPost';
 import PaymentPage from './webpage/pages/PaymentPage';
-import PaymentComplete from './webpage/pages/PaymentComplete';
 import MyPage from './webpage/pages/MyPage';
 import Market from './webpage/pages/Market';
 // ⚠️ Chat 컴포넌트는 roomId 파라미터를 받도록 구현되어 있어야 함
@@ -59,6 +58,7 @@ function App() {
     '/datastatistics',
     '/dashboard/chat',
     '/PersonalInformation',
+    '/detectpest'
   ];
   const isDashboardRoute = dashboardPaths.includes(location.pathname);
 
@@ -156,7 +156,6 @@ function App() {
             />
             <Route path="smartfarmlist" element={<SmartFarmList />} />
             <Route path="/payment/:id" element={<PaymentPage />} />
-            <Route path="/paymentcomplete" element={<PaymentComplete />} />
             <Route path="/mypage" element={<MyPage />} />
             <Route
               path="/pagination"
@@ -190,10 +189,10 @@ function App() {
             <Route path="/setting" element={<Setting />} />
             <Route path="/settingnetwork" element={<SettingNetwork />} />
             <Route path="/settingaccount" element={<SettingAccount />} />
-            <Route path="/settingadd" element={<SettingAdd />} />
             <Route path="/datastatistics" element={<DataStatistics />} />
             <Route path="/dashboard/chat" element={<Chatting />} />
             <Route path="/PersonalInformation" element={<PersonalInformation />} />
+            <Route path="/detectpest" element={<DetectPestPage sensorData={sensorData} />} />
 
             {/* 404 */}
             <Route path="*" element={<div>Not Found</div>} />

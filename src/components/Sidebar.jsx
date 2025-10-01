@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Sidebar.css';
+import './SideBar.css';
 import logoutButton from '../assets/logoutButton.svg';
 
-const Sidebar = ({ isOpen }) => {
+const SideBar = ({ isOpen }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -24,6 +24,9 @@ const Sidebar = ({ isOpen }) => {
           <Link to="/dashboard/chat">챗봇</Link>
         </li>
         <li>
+        <Link to="/detectpest">병해충 감지</Link>
+        </li>
+        <li>
           <Link to="/setting">설정</Link>
         </li>
       </ul>
@@ -38,4 +41,4 @@ const Sidebar = ({ isOpen }) => {
   );
 };
 
-export default Sidebar;
+export default SideBar;

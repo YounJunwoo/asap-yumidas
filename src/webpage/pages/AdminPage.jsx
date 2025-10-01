@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import './AdminPage.css';
-import Header from '../../webpage/components/Header';
 
 const AdminPage = () => {
   const [rows, setRows] = useState([]);
@@ -112,7 +111,6 @@ const AdminPage = () => {
   return (
     <div className="adminPage">
       <div className="container">
-        <Header />
         <div className="main-grid">
           <div className ="header-space">
           <section className="title-section">
