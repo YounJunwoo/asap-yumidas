@@ -1,6 +1,5 @@
 // src/pages/mypage/Mypage.jsx
-import "./Mypage.css";
-import Header from "../../webpage/components/Header";
+import "./MyPage.css";
 import ProductImage from "./ProductImage";
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -8,7 +7,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const API = import.meta.env?.VITE_API ?? "http://localhost:5000";
 const toAbs = (u) => (u ? (u.startsWith("http") ? u : `${API}${u}`) : "");
 
-const Mypage = () => {
+const MyPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -335,4 +334,4 @@ const Mypage = () => {
   );
 };
 
-export default Mypage;
+export default MyPage;

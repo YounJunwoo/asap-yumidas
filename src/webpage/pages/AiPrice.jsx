@@ -1,15 +1,14 @@
 import React, { useState, useMemo } from "react";
 import './AiPrice.css';
-import Header from '../../webpage/components/Header';
 import lettuce from '../../icons/lettuce.svg';
 import spinach from '../../icons/spinach.svg';
-import usePriceTrend from '../../webpage/hooks/usePriceTrend';
-import AiGraph from '../../webpage/components/AiGraph';
+import usePriceTrend from '../hooks/usePriceTrend';
+import AiGraph from '../components/AiGraph';
 
 const AiPrice = () => {
   
   const [selectedTab, setSelectedTab] = useState("lettuce");
-  const { loading, error, data } = usePriceTrend(selectedTab);
+  const { data } = usePriceTrend(selectedTab);
   const [range, setRange] = useState("30"); 
   
   const cropNameMap = {
@@ -31,8 +30,8 @@ const AiPrice = () => {
     return `${year}-${month}-${day}`;
   };
 
-  const today = new Date();
-  const todayString = formatDate(today);
+  const today = useMemo(() => new Date(), []);
+  const todayString = useMemo(() => formatDate(today), [today]);
 
   // 어제, 오늘 데이터 추출
   const todayForecast = data?.detailed_forecast?.find(item => item.date === todayString);
@@ -49,6 +48,17 @@ const AiPrice = () => {
     diffRate = ((priceDiff / yesterdayForecast.price) * 100).toFixed(1);
     diffClass = priceDiff >= 0 ? "up" : "down";
   }
+
+  // 예측 최고가 찾기
+  const futureHighestPrice = useMemo(() => {
+    if (!data?.detailed_forecast) return null;
+
+    const futureData = data.detailed_forecast
+      .filter(item => item.date > todayString)
+      .sort((a, b) => b.price - a.price);
+
+    return futureData.length > 0 ? futureData[0] : null;
+  }, [data, todayString]);
 
   // 7일, 30일 데이터 필터링 코드
   const filteredData = useMemo(() => {
@@ -71,16 +81,15 @@ const AiPrice = () => {
     return data.detailed_forecast
       .filter(item => item.date >= startDateString && item.date <= endDateString)
       .sort((a, b) => new Date(a.date) - new Date(b.date));
-  }, [data, range, todayString]);
+  }, [data, range, today]);
 
-  if (loading) return console.log("불러오는 중...");
+  /*if (loading) return console.log("불러오는 중...");
   if (error) return console.log("에러 발생:", error);
-  if (!data) return console.log("데이터 없음");
+  if (!data) return console.log("데이터 없음");*/
 
   return (
     <div className="AiPrice">
       <div className="container">
-        <Header />
         <main className="main-grid">
           <div className="header-section">
             <section className="title-section">
@@ -113,10 +122,10 @@ const AiPrice = () => {
             <article className="stat-card">
               <div className="price-stat-label">예측 최고가</div>
               <div className="price-stat-value">
-                {data?.highest_predicted_price?.price?.toLocaleString() || "-"}원
+                {futureHighestPrice?.price?.toLocaleString() || "-"}원
               </div>
               <div className="highest-price-stat-value">
-                {data?.highest_predicted_price?.date || "-"}
+                {futureHighestPrice?.date || "-"}
               </div>
             </article>
 
@@ -192,13 +201,13 @@ const AiPrice = () => {
 
               <div className="metric">
                 <div className="metric-label">추천 재배일</div>
-                <div className="metric-value">{data?.highest_predicted_price?.date || "-"}</div>
+                <div className="metric-value">{futureHighestPrice?.date || "-"}</div>
               </div>
 
               <div className="metric">
                 <div className="metric-label">예측 가격(원/kg)</div>
                 <div className="metric-value">
-                  {data?.highest_predicted_price?.price?.toLocaleString() || "-"}원
+                  {futureHighestPrice?.price?.toLocaleString() || "-"}원
                 </div>
               </div>
             </div>
@@ -210,7 +219,6 @@ const AiPrice = () => {
 };
 
 export default AiPrice;
-
 
 
 

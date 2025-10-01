@@ -1,11 +1,10 @@
-import "./Homepage.css";
+import "./HomePage.css";
 import diversity from "../../icons/diversity.svg";
-import Header from "../../webpage/components/Header";
 import AI from "../../icons/AI image.svg";
 import market from "../../icons/market image.svg";
 import smartfarm from "../../icons/smart farm image.svg";
 import groceries from "../../icons/groceries 2.png";
-import Footer from "../../webpage/components/Footer";
+import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -14,7 +13,7 @@ const API = import.meta.env?.VITE_API ?? "http://localhost:5000";
 // 스마트팜 목록 라우트 (프로젝트 라우트에 맞게 필요 시 변경)
 const FARM_LIST_ROUTE = "/farms";
 
-const Homepage = ({ isLoggedIn, onLogin, onLogout }) => {
+const HomePage = ({ isLoggedIn, onLogin, onLogout }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -194,4 +193,4 @@ const Homepage = ({ isLoggedIn, onLogin, onLogout }) => {
   );
 };
 
-export default Homepage;
+export default HomePage;

@@ -17,12 +17,12 @@ import PersonalInformation from './pages/PersonalInformation';
 import useSensorMonitor from './hooks/useSensorMonitor';
 
 // 웹페이지 컴포넌트
-import Homepage from './webpage/pages/Homepage';
-import Detailpage from './webpage/pages/Detailpage';
-import Sellingpost from './webpage/pages/Sellingpost';
-import Paymentpage from './webpage/pages/Paymentpage';
+import HomePage from './webpage/pages/HomePage';
+import DetailPage from './webpage/pages/DetailPage';
+import SellingPost from './webpage/pages/SellingPost';
+import PaymentPage from './webpage/pages/PaymentPage';
 import PaymentComplete from './webpage/pages/PaymentComplete';
-import Mypage from './webpage/pages/Mypage';
+import MyPage from './webpage/pages/MyPage';
 import Market from './webpage/pages/Market';
 // ⚠️ Chat 컴포넌트는 roomId 파라미터를 받도록 구현되어 있어야 함
 import Chat from './webpage/pages/Chat';
@@ -141,23 +141,23 @@ function App() {
             <Route
               path="/"
               element={
-                <Homepage
+                <HomePage
                   isLoggedIn={isLoggedIn}
                   onLogin={handleLogin}
                   onLogout={handleLogout}
                 />
               }
             />
-            <Route path="/detail/:id" element={<Detailpage />} />
+            <Route path="/detail/:id" element={<DetailPage />} />
             <Route path="/price" element={<AiPrice />} />
             <Route
               path="/sellingpost"
-              element={isLoggedIn ? <Sellingpost /> : <Navigate to="/login" replace />}
+              element={isLoggedIn ? <SellingPost /> : <Navigate to="/login" replace />}
             />
             <Route path="smartfarmlist" element={<SmartFarmList />} />
-            <Route path="/payment/:id" element={<Paymentpage />} />
+            <Route path="/payment/:id" element={<PaymentPage />} />
             <Route path="/paymentcomplete" element={<PaymentComplete />} />
-            <Route path="/mypage" element={<Mypage />} />
+            <Route path="/mypage" element={<MyPage />} />
             <Route
               path="/pagination"
               element={

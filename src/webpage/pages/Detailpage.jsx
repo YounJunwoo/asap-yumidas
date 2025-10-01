@@ -1,13 +1,12 @@
 // src/webpage/pages/Detailpage.jsx
-import "./Detailpage.css";
-import Header from "../../webpage/components/Header";
+import "./DetailPage.css";
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 const API = import.meta.env?.VITE_API ?? "http://localhost:5000";
 const toAbs = (u) => (u?.startsWith("http") ? u : `${API}${u || ""}`);
 
-export default function Detailpage() {
+export default function DetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
 

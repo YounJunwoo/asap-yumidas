@@ -1,9 +1,8 @@
-import './Paymentpage.css';
-import Header from '../../webpage/components/Header';
+import './PaymentPage.css';
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-const Paymentpage = () => {
+const PaymentPage = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(
     localStorage.getItem('auth') === '1'
@@ -277,13 +276,6 @@ const Paymentpage = () => {
   return (
     <div className="paymentpage">
       <div className="container">
-        <Header
-          isLoggedIn={isLoggedIn}
-          onLogout={() => {
-            localStorage.removeItem('auth');
-            window.location.href = '/';
-          }}
-        />
         <div className="main-grid">
           <section className="title-section">
             <h2 className="form-title">결제하기</h2>
@@ -410,4 +402,4 @@ const Paymentpage = () => {
   );
 };
 
-export default Paymentpage;
+export default PaymentPage;

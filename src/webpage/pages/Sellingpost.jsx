@@ -1,11 +1,10 @@
-import './Sellingpost.css';
-import Header from '../../webpage/components/Header';
+import './SellingPost.css';
 import React, { useState, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const API = import.meta.env?.VITE_API ?? 'http://localhost:5000';
 
-const Sellingpost = () => {
+const SellingPost = () => {
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState('');
   const [showImg, setShowImg] = useState([]);
@@ -145,14 +144,6 @@ const Sellingpost = () => {
   return (
     <div className="sellingpost">
       <div className="container">
-        <Header
-          isLoggedIn={isLoggedIn}
-          onLogout={async () => {
-            try { await fetch(`${API}/api/logout`, { method: 'POST', credentials: 'include' }); } catch {}
-            window.dispatchEvent(new Event('authchange'));
-            navigate('/');
-          }}
-        />
         <main className="main-grid">
           <section className="title-section">
             <h2 className="form-title">상품 등록</h2>
@@ -239,4 +230,4 @@ const Sellingpost = () => {
   );
 };
 
-export default Sellingpost;
+export default SellingPost;
