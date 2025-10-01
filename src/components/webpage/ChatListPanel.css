@@ -1,0 +1,21 @@
+/* 예: src/components/webpage/ChatListPanel.css (선택) */
+.chatlist-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.3);
+  display: flex; justify-content: flex-start; align-items: stretch; z-index: 1000;
+}
+.chatlist-panel {
+  width: 380px; max-width: 90vw; background: #fff; height: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2); padding: 16px; overflow: auto;
+}
+.chatlist-header { display: flex; align-items: center; gap: 8px; }
+.chatlist-header h3 { margin: 0; }
+.chatlist-close, .chatlist-refresh { border: 1px solid #ddd; background: #f7f7f7; padding: 6px 10px; border-radius: 6px; }
+.spacer { flex: 1; }
+.chatlist-empty { padding: 24px; color: #666; }
+.chatlist-list { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 12px; }
+.chatlist-item { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 10px; border: 1px solid #eee; border-radius: 10px; cursor: pointer; }
+.chatlist-item:hover { background: #fafafa; }
+.chatlist-thumb { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; }
+.chatlist-title { font-weight: 600; }
+.chatlist-row { display: flex; justify-content: space-between; color: #999; font-size: 12px; margin-top: 2px; }
+.chatlist-last { margin-top: 6px; color: #444; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

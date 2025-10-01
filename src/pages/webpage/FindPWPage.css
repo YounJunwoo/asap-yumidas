@@ -1,0 +1,66 @@
+.find-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.find-box {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 400px;
+  background-color: white;
+  text-align: center;
+}
+
+.find-section {
+  margin-bottom: 2rem;
+}
+
+.find-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.find-input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem; /* 🔧 줄인 padding */
+}
+
+.find-input {
+  border: none;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+}
+
+.find-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.find-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.back-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #5e5e5e;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}

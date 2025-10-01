@@ -1,0 +1,208 @@
+/* === 전역 & 변수 === */
+html, body, #root { height: 100%; }
+* { box-sizing: border-box; }
+
+:root {
+  --headerH: 64px;
+  --topGap: clamp(12px, 2vh, 24px);
+  --bottomGap: clamp(20px, 6vh, 72px);
+  --pagePad: clamp(12px, 1.5vw, 16px);
+  --maxW: 1160px;
+
+  /* 채팅 버블 색감 */
+  --bubble-mine: #FEE500;          /* 카카오 느낌 노랑 */
+  --bubble-other: #ffffff;
+  --bubble-other-border: #ececec;
+  --chat-bg: #f7f7fa;
+}
+
+/* === 전체 레이아웃 === */
+.chat-page{
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* === 왼쪽: 상품 영역 === */
+.product-section{
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  /* 고정 높이 + 내부 스크롤 분리용 */
+  height: clamp(520px, 62vh, 760px);
+  min-height: 0;
+}
+
+/* Chat.jsx에서 <img class="product-image" /> 를 직접 사용하므로 img 자체에 스타일 */
+.product-section .product-image{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  background: #eee;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  padding: clamp(12px, 1.5vh, 18px) clamp(16px, 1.8vw, 20px);
+}
+
+.product-description{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  padding: clamp(12px, 1.4vh, 16px) clamp(16px, 1.8vw, 20px);
+  flex: 1 1 auto;
+  min-height: clamp(80px, 12vh, 160px);
+  overflow: auto;
+}
+
+.payment-button{
+  background:#4caf50; color:#fff;
+  padding:12px; border:0;
+  border-radius:8px; cursor:pointer;
+  width:100%; font-size:16px;
+}
+.payment-button:hover{ background:#45a049; }
+
+/* === 오른쪽: 채팅 영역 === */
+.chat-section{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+
+  /* 고정 높이 + 내부 스크롤 분리 */
+  height: clamp(520px, 62vh, 760px);
+  min-height: 0;
+}
+
+/* 채팅 내역(여기만 스크롤) */
+.chat-window{
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 16px;
+  overflow-y: auto;             /* 핵심: 내부 스크롤 */
+  overscroll-behavior: contain; /* 바디 스크롤 전파 방지 */
+  background: var(--chat-bg);
+  border-radius: 8px 8px 0 0;
+}
+
+/* 입력칸 */
+.chat-input{
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 10px env(safe-area-inset-bottom);
+  border-top: 1px solid #ccc;
+  background:#fff; border-radius: 0 0 8px 8px;
+  margin-top: auto;
+}
+.chat-input input{
+  flex: 1; height: 38px; padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc; border-radius: 8px; background:#fff;
+}
+.chat-input input:focus{
+  outline: none; border-color:#aaa; box-shadow: 0 0 0 3px rgba(0,0,0,.04);
+}
+.send-button{
+  width: 40px; height: 40px;
+  display: inline-flex; align-items:center; justify-content:center;
+  border: 1px solid #e2e2e2; border-radius:8px;
+  background:#fff; cursor:pointer;
+}
+.send-button:hover{ background:#fafafa; }
+
+/* === 카카오톡 스타일 말풍선 === */
+.msg-row{
+  display:flex; align-items:flex-end; gap:8px;
+  margin:6px 0;
+}
+.msg-row.mine{ justify-content:flex-end; }
+
+/* 상대 아바타 (내 메시지엔 감춤) */
+.msg-avatar{
+  width: 28px; height: 28px; border-radius: 50%;
+  background:#e5e5e5;
+  flex: 0 0 28px;
+  display:none;
+}
+.msg-row:not(.mine) .msg-avatar{ display:block; }
+
+/* 버블 공통 */
+.bubble{
+  max-width: min(72%, 640px);
+  border-radius: 18px;
+  padding: 10px 12px;
+  line-height:1.38;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+  position: relative;
+  word-break: break-word;
+  overflow-wrap: anywhere;   /* 긴 단어 줄바꿈 */
+  white-space: pre-wrap;
+}
+.bubble .text{ font-size:15px; }
+.bubble .time{ font-size:12px; color:#8a8a8a; margin-top:4px; text-align:right; }
+.msg-row.mine .bubble .time{ text-align:left; }
+
+/* 상대(좌측, 회색) */
+.bubble.other{
+  background: var(--bubble-other);
+  border: 1px solid var(--bubble-other-border);
+  color: #1b1b1b;
+  border-top-left-radius: 6px;
+}
+.bubble.other::after{
+  content:""; position:absolute; left:-6px; bottom:8px;
+  border-width:6px; border-style:solid;
+  border-color:transparent var(--bubble-other) transparent transparent;
+  filter: drop-shadow(-1px 0 0 rgba(0,0,0,.03));
+}
+
+/* 나(우측, 노랑) */
+.bubble.mine{
+  background: var(--bubble-mine);
+  color:#111;
+  border-top-right-radius: 6px;
+  border: none;
+}
+.bubble.mine::after{
+  content:""; position:absolute; right:-6px; bottom:8px;
+  border-width:6px; border-style:solid;
+  border-color:transparent transparent transparent var(--bubble-mine);
+}
+
+/* 유틸 */
+.empty{ color:#666; padding:12px; }
+
+/* 스크롤바(선택) */
+.chat-window::-webkit-scrollbar{ width: 10px; }
+.chat-window::-webkit-scrollbar-thumb{
+  background: #d8dbe0; border-radius: 999px;
+}
+.chat-window::-webkit-scrollbar-track{ background: transparent; }
+
+/* === 반응형 === */
+@media (max-width: 1280px){
+  .chat-page{ flex-direction: column; }
+  .product-section, .chat-section{
+    height: clamp(520px, 60vh, 720px);
+  }
+  .product-section .product-image{ aspect-ratio: 3 / 4; }
+}
+@media (max-width: 1024px){
+  .product-section .product-image{ aspect-ratio: 4 / 5; }
+  .chat-input input{ height: 34px; }
+}

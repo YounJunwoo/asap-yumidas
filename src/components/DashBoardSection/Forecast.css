@@ -1,0 +1,61 @@
+.forecast-list {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+}
+
+.forecast-container {
+  margin-top: 2px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forecast-day-max {
+  margin-bottom: 3px;
+}
+
+.forecast-day-description {
+  margin-top: -10px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.forecast-day-date {
+  font-size: 20px;
+  font-weight: 750;
+  margin-bottom: -10px;
+  white-space: nowrap;
+}
+
+.forecast-day-temp {
+  display: flex;
+  gap: 40px;
+  justify-content: center; /* 가로 정렬 */
+  text-align: center;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .forecast-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 50px;
+  }
+
+  .forecast-day {
+    width: 100%;
+  }
+  
+}

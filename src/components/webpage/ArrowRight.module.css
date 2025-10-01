@@ -1,0 +1,19 @@
+.icon {
+  position: absolute;
+  height: 58.13%;
+  width: 58.13%;
+  top: 20.63%;
+  right: 21.25%;
+  bottom: 21.25%;
+  left: 20.63%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.arrowRight {
+  width: 16px;
+  position: relative;
+  height: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}

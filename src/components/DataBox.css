@@ -1,0 +1,168 @@
+.dataBox {
+  width:100%;
+  min-width: 0;
+  max-width: 100%;
+  height: 610px;
+  min-height: 160px;
+  border-radius: 0;
+  background: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 16px 0 16px;
+  box-sizing: border-box;
+}
+.graph {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.dataBoxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  margin: 20px auto;
+  padding:0 20px;
+  box-sizing: border-box; 
+}
+
+.dataTitleBox {
+  background: #00663A;
+  color: #FFFFFF;
+  padding: 0 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+  letter-spacing: 0;
+}
+
+.dataBoard {
+  border: 2px solid #ffffff;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.dataRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 3px solid #00663A;
+  border-radius: 5px;
+  height: 50px;
+  flex: 1 1 0;
+  min-width: 30px;
+  margin: 0;
+}
+
+.dataRowTitleBox {
+  background: #00663A;
+  color: #FFFFFF;
+  padding: 5px 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 0;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.dataRowValue {
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 20px;
+  flex-grow: 1;
+  text-align: right;
+}
+
+.dataRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  flex: 1 1 0;
+  min-width: 90px;
+  margin: 0;
+  height: 100%;
+}
+
+.dataRowTitleBox {
+  background: #00663A;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 5px 0 0 5px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: 2px solid #00663A;
+  border-right: none;
+}
+
+.dataRowValue {
+  background: #fff;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 0 5px 5px 0;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 0;
+  flex: 1 1 0;
+  min-width: 0;
+  justify-content: flex-start;
+  border: 2px solid #00663A;
+  border-left: none;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .dataRowTitleBox,
+  .dataRowValue {
+    font-size: 14px; 
+    padding: 0 5px 0 5px;
+  }
+
+  .dataRow {
+    min-width: 70px; 
+  }
+
+  .dataBoard {
+    gap: 6px; 
+  }
+  .dataBoxGrid {
+    grid-template-columns: 1fr; 
+    max-width: 100%;
+    padding: 0 20px;
+    gap: 30px;
+  }
+  .dataTitleBox {
+    font-size: 22px;
+  }
+
+  .dataBox {
+    margin: 15px 8px 0 8px; 
+  }
+}
+

@@ -1,0 +1,132 @@
+
+.chat-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.chat-area {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  gap: 6px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* 말풍선 기본 스타일 */
+.message-bubble {
+  border-radius: 20px;
+  padding: 10px 14px;
+  font-size: 20px;
+  max-width: 60%;
+  word-break: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 사용자 말풍선 (오른쪽) */
+.user-message {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.user-bubble {
+  background-color: #d4f4dd;
+  color: #000;
+  margin-right: 8px;
+}
+
+/* AI 말풍선 (왼쪽) */
+.AI-message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+}
+
+.ai-bubble {
+  background-color: #eeeeee;
+  color: #333;
+  margin-left: 8px;
+  
+}
+
+/* AI 아이콘 */
+.AI-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+  margin-top: 10px;
+}
+
+/* 입력 영역 */
+.input-area {
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 25px;
+  box-sizing: border-box;
+  width: 100%;     
+  max-width: 100%;
+}
+
+.chat-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.send-icon {
+  width: 30px;
+  height: 40px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .chat-input {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .send-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .input-area {
+    padding: 8px 10px;
+  }
+
+  .chat-layout {
+    padding: 30px;
+  }
+  .message-bubble {
+    font-size: 14px;
+    padding: 5px 8px;
+    margin-bottom: 12px;
+    
+  }
+
+  .AI-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 2px;
+    margin-top: 6px;
+  }
+}

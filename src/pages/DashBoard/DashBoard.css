@@ -1,0 +1,153 @@
+/* 공통 박스 스타일 */
+.box-common {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* 전체 레이아웃 (.dashboard)= App.css 부분에 main-content로 클래스가 있음*/
+
+.dashboard-main {
+  display: flex;
+  flex: 1;
+}
+
+.content-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box; 
+}
+
+.bottom-row {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  padding: 10px 10px;
+}
+/* 센서 + 현재기온 묶음 */
+.sensor-weather-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1.5;
+  gap: 20px;
+}
+
+/* 사이드 정보 영역 */
+.side-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 20px;
+}
+
+/* 개별 박스들 (공통 스타일은 box-common으로 대체) */
+.usage-status,
+.actuator {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+
+.actuator {
+  flex: 0.5;
+}
+
+/* 센서 카드 그룹 */
+.sensor-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* 센서 카드 스타일 */
+.card {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  flex: 1 1 100px;    
+  height: auto;
+  box-sizing: border-box;
+  width: 100%; 
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card-value {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.card-unit {
+  font-size: 14px;
+  color: #666;
+}
+
+.weather-box {
+  flex: 2;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px 0 50px 0;
+}
+
+
+@media (max-width: 768px) {
+  
+  .bottom-row {
+    flex-direction: column;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .sensor-weather-column{
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px; /* 좌우 균등 여백 */
+    box-sizing: border-box;
+    margin: 0;
+    height: auto;
+    margin-bottom:0;
+  }
+
+  .side-info{
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    flex: none;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .weather-box {
+    flex: none;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+}

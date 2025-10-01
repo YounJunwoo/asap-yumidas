@@ -1,0 +1,20 @@
+.text-link {
+  align-items: flex-start;
+  display: inline-flex;
+  position: relative;
+}
+
+.text-link .text-wrapper-18 {
+  color: var(--color-text-default-default);
+  font-family: var(--body-link-font-family);
+  font-size: var(--body-link-font-size);
+  font-style: var(--body-link-font-style);
+  font-weight: var(--body-link-font-weight);
+  letter-spacing: var(--body-link-letter-spacing);
+  line-height: var(--body-link-line-height);
+  margin-top: -1.00px;
+  position: relative;
+  text-decoration: underline;
+  white-space: nowrap;
+  width: fit-content;
+}

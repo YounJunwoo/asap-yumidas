@@ -1,0 +1,113 @@
+.paymentComplete {
+  height: auto;
+  font-family: 'Pretendard', 'Plus Jakarta Sans', Helvetica, Arial, sans-serif;
+}
+
+.payment-complete {
+  grid-column: 4 / span 6;
+  background: #fff;
+  border-radius: 12px;
+  padding: 60px 40px;
+  text-align: center;
+  margin:  60px 70px 70px 70px;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: #6a842a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.completion-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+.completion-desc {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.browse-btn {
+  background: #fff;
+  color: #222;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.browse-btn:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.payment-mypage-btn {
+  background: #6a842a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.payment-mypage-btn:hover {
+  background: #5a7120;
+}
+
+@media (max-width: 768px) {
+.payment-complete {
+  padding: 60px 20px;
+  text-align: center;
+  margin: 50px auto;
+}
+.success-icon {
+  width: 60px;
+  height: 60px;
+  font-size: 25px; 
+}
+
+.completion-title {
+  font-size: 20px;
+}
+.completion-desc {
+  font-size: 13px;
+}
+
+.browse-btn {
+  padding: 12px 18px;
+  font-size: 13px;
+}
+
+.mypage-btn {
+  padding: 12px 18px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+}

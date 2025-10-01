@@ -1,0 +1,16 @@
+.b {
+  position: relative;
+  line-height: 140%;
+}
+.paginationGap {
+  border-radius: var(--br-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--Space-200) var(--Space-400);
+  text-align: left;
+  font-size: var(--Scale-03);
+  color: var(--black-100);
+  font-family: var(--Family-Sans);
+}

@@ -1,0 +1,131 @@
+.actuator {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actuator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.actuator-topic {
+  color: #212121;
+  font-family: 'Inter', Helvetica;
+  font-size: 26px;
+  font-weight: 600;
+}
+.toggle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 36px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(34px);
+}
+
+.toggle-status-text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: #333;
+}
+
+.pump {
+  margin-top: 20px;
+  background-color: #d9d9d980;
+  height: 68px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.pump-text {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  font-size: 23px;
+  font-weight: 600;
+  color: #212121;
+}
+
+.icon-button {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  width: 81px;
+  height: 36px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.icon-button.on {
+  background-color: #4caf50;
+}
+
+.icon-button.off {
+  background-color: #b80c00;
+}
+
+.icon-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* 🔥 불필요한 .overlap-2 제거됨 */
+/* 🔥 불필요한 .toggle-labels, .off-variant3, .expansion-icon 등 제거됨 */

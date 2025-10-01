@@ -1,0 +1,82 @@
+.topNavbar{
+background-color: #006639;
+height: 60px;
+width: 100%;
+max-width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: relative;
+padding: 0 40px;
+box-sizing: border-box;
+}
+.dashboard-logo{
+color: #ffffff;
+font-family: 'Inter', Helvetica, Arial, sans-serif;
+font-size: 28px;
+font-weight: 50;
+margin-left: -27px;
+margin-top: 2px;
+letter-spacing: 0;
+line-height: normal;
+white-space: nowrap;
+}
+.logo-sub{
+  color: #ffffff;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 100px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hamburger{
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  background:none;
+  border:none;
+  margin-right: -25px;
+  color:#ffffff;
+}
+
+.hamburgerbtn {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+  color:#ffffff;
+}
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburgerbtn {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .logo {
+    font-size: 20px;
+  }
+  .logo-sub{
+    font-size: 30px;
+  }
+
+  .topNavbar{
+    height: 45px;
+  }
+
+  .hamburgerbtn {
+    width: 22px;
+    height: 22px;
+  }
+
+}

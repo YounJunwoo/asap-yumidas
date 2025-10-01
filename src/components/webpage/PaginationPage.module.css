@@ -1,0 +1,21 @@
+.div {
+  position: relative;
+  line-height: 100%;
+}
+
+.root {
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px; /* ← 버튼 여백 확장 */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.root[data-state="Current"] {
+  background-color: #333;
+  color: white;
+}

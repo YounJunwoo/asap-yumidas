@@ -1,0 +1,31 @@
+.sensor-wrapper {
+  width: 100%;
+  margin: 0;
+}
+
+/* ✅ 강제로 5칸 그리드로 고정 */
+.sensor-row {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.card-value {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.card-unit {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ✅ 반응형 */
+@media (max-width: 1024px) {
+  .sensor-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

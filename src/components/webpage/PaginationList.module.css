@@ -1,0 +1,11 @@
+
+.paginationList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* ← 좌측 정렬에서 중앙 정렬로 변경 */
+  gap: 16px; /* ← 간격 충분히 줌 */
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}

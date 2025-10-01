@@ -1,0 +1,114 @@
+.modal-layout{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.modal-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 16px 0;
+}
+
+.modal-instruction {
+  font-size: 16px;
+  color: #6a842a;
+  font-weight: 500;
+  text-decoration: underline;
+  margin: 0 0 20px 0;
+}
+
+.crop-selection {
+  margin-bottom: 24px;
+}
+
+.crop-option {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.crop-option input[type="radio"] {
+  display: none;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6a842a;
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.crop-option input[type="radio"]:checked + .radio-custom {
+  background-color: #6a842a;
+}
+
+.crop-option input[type="radio"]:checked + .radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.crop-label {
+  font-size: 16px;
+  color: #333;
+}
+
+.enter-button {
+  width: 100%;
+  background-color: #6a842a;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.enter-button:hover {
+  background-color: #6a842a;
+}
+
+.enter-button:active {
+  transform: translateY(1px);
+}

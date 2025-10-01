@@ -1,0 +1,33 @@
+.component {
+  height: 32px;
+  width: 31px;
+}
+
+.component .overlap-group-4 {
+  height: 32px;
+  position: relative;
+}
+
+.component .ellipse-8 {
+  background-color: #c12525;
+  border-radius: 11px;
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+
+.component .text-wrapper-20 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  left: 6px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 2px;
+  width: 25px;
+}
+

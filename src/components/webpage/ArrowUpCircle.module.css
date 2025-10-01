@@ -1,0 +1,19 @@
+.icon {
+  position: absolute;
+  height: 83.4%;
+  width: 83.4%;
+  top: 8.4%;
+  right: 8.2%;
+  bottom: 8.2%;
+  left: 8.4%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.arrowUpCircle {
+  width: 50px;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  flex-shrink: 0;
+}

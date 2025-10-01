@@ -1,0 +1,164 @@
+.serial-form-section {
+  grid-column: 1 / -1;
+  display: flex;  
+  justify-content: center;  
+  align-items: center;       
+  gap: 20px;
+  padding-top: 8px;
+}
+
+
+.serial-form-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-space {
+  grid-column: 3 / span 8;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  display:flex;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+
+.serial-input-label {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.serial-form-controls {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  align-items: center;
+}
+
+.serial-text-input {
+  width: 260px;
+  height: 40px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.serial-select-input {
+  width: 220px;
+  height: 40px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #6b7280;
+  box-sizing: border-box;
+}
+
+.serial-primary-btn {
+  height: 40px;
+  padding: 0 30px;
+  border-radius: 8px;
+  border: none;
+  background: #1f7a3a;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.serial-primary-btn:hover {
+  background: #16632f;
+}
+
+.serial-delete-btn {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: none;
+  background: #6a842a;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.serial-delete-btn:hover {
+  background: #16632f;
+}
+
+.table-header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.table-title {
+  font-weight: 600;
+}
+
+.table-section {
+  grid-column: 1 / -1;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 14px 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table thead th {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.checkbox-cell {
+  width: 36px;
+}
+
+.table-serial-number {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.table-date {
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .main-grid,
+  .serial-form-section {
+    grid-template-columns: 1fr;
+  }
+  .serial-form-right {
+    align-items: flex-start;
+  }
+  .serial-form-controls {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .serial-text-input,
+  .serial-select-input,
+  .serial-primary-btn {
+    width: 100%;
+  }
+  .table-header {
+    gap: 30px;
+  }
+}

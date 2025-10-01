@@ -1,0 +1,30 @@
+.logout {
+  height: 51px;
+  width: 58px;
+}
+
+.logout .overlap-group-3 {
+  height: 50px;
+  position: relative;
+}
+
+.logout .text-wrapper-17 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 29px;
+  width: 58px;
+}
+
+.logout .lucide-log-out {
+  height: 30px;
+  left: 5px;
+  position: absolute;
+  top: 0;
+  width: 30px;
+}

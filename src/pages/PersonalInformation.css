@@ -1,0 +1,113 @@
+.PCard {
+  background: #fff;
+  border-radius: 8px;
+  width:100%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.PHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.Title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+
+.pActions button {
+  margin-left: 12px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #eee;
+  color: #222;
+  transition: background 0.2s;
+}
+
+.pActions .pAdd {
+  background: #078b00;
+  color: #fff;
+}
+.pActions .pAdd:hover,
+.pActions .pAdd:active {
+  background: #066a00;
+}
+
+.pActions .pSync {
+  background: #eee;
+  color: #222;
+  font-size: 20px;
+  padding: 14px 18px;
+}
+.pActions .pSync:hover,
+.pActions .pSync:active {
+  background: #e0e0e0;
+}
+
+.pTable {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pTable th,
+.pTable td {
+  border-bottom: 1.5px solid #e0e0e0;
+  text-align: left;
+  padding: 16px 12px;
+  font-size: 20px;
+}
+
+.pTable th {
+  background: #f5f5f5;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .settingbar-row{
+    display:flex;
+    flex-direction: column;
+    padding: 20px 16px;
+    box-sizing: border-box;
+    } 
+  .pCard {
+    padding: 18px;
+    margin: 50px auto;
+    width:100%;
+    max-width: 330px;
+  }
+  .Title {
+    font-size: 26px;             
+  }
+  .pTable {
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
+  }
+  .pTable th,
+  .pTable td {
+    font-size: 12px;
+    padding: 15px 3px;
+    text-align: center;
+    white-space: nowrap;
+    
+  }
+
+  .pActions button {
+    font-size: 13px;
+    padding: 10px 10px;
+    min-width: 0;
+  }
+
+ 
+}

@@ -1,0 +1,148 @@
+.settingbar-row {
+  display: flex;
+}
+
+.network-card {
+  background: #fff;
+  border-radius: 8px;
+  margin: 55px auto;
+  padding: 40px;
+  width:100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.networkHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+
+.networkTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+
+.wifi-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding-left: 170px;
+}
+
+.wifi {
+  height: 50px;
+  width: 50px;
+  margin-top: -10px;
+  margin-left: 15px;
+}
+
+.wifi-info {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.wifi-name {
+  font-size: 18px;
+  
+}
+.wifi-status{
+  font-size: 15px;
+}
+
+.switch{
+  margin-left: 25px;
+}
+
+
+.network-info-title {
+  font-size: 23px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 0; 
+}
+
+.user-info-title,
+.device-info-title {
+  font-weight: 500;
+  width: 120px;
+  margin-left: 120px;
+  font-size: 16px;
+}
+
+.user-info-value,
+.device-info-value {
+  flex: 1;
+  margin-left: 250px;
+}
+
+
+
+@media (max-width: 768px) {
+  .network-card {
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 350px;
+  }
+  .networkTitle {
+    font-size: 25px;
+  }
+
+  .wifi-section {
+    flex-direction: flex;
+    align-items: flex-start;
+    padding-left: 0;
+    gap: 10px;
+  }
+
+  .wifi {
+    margin-left: 0;
+  }
+
+  .switch {
+    margin-left: 10px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .user-info-title,
+  .device-info-title {
+    margin-left: 0;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .user-info-value,
+  .device-info-value {
+    margin-left: 0;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .network-info-title {
+    font-size: 20px;
+    margin-left: 0;
+  }
+}
+
+

@@ -1,0 +1,19 @@
+.dataStatistics {
+  flex-grow: 1; 
+  height: 100%;
+  overflow: hidden; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dataStatistics h1 {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .dataStatistics{
+    overflow-y: scroll;
+  }
+}

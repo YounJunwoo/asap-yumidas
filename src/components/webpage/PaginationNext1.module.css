@@ -1,0 +1,27 @@
+.next {
+  position: relative;
+  line-height: 100%;
+}
+.paginationNext {
+  border-radius: var(--Radius-200);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--Space-200) var(--Space-300);
+  gap: var(--Space-200);
+  text-align: left;
+  font-size: var(--Body-Size-Medium);
+  color: var(--Text-Default-Default);
+  font-family: var(--Body-Font-Family);
+}
+
+.paginationNext {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  padding: 8px 14px;
+  cursor: pointer;
+  user-select: none;
+}

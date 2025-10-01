@@ -1,0 +1,15 @@
+.pagination {
+  align-self: stretch;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 565px;
+  box-sizing: border-box;
+  gap: var(--Space-200);
+  text-align: left;
+  font-size: var(--Body-Size-Medium);
+  color: var(--Text-Default-Default);
+  font-family: var(--Body-Font-Family);
+}
