@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Sidebar.css';
-import logoutButton from '../icons/lucide/logoutButton.svg';
+import logoutButton from '../assets/logoutButton.svg';
 
 const Sidebar = ({ isOpen }) => {
   const navigate = useNavigate();

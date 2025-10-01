@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './Setting.css';
 import { Link } from 'react-router-dom';
-import profileIcon from '../icons/lucide/profileIcon.svg';
+import profileIcon from '../assets/profileIcon.svg';
 import Settingbar from '../components/Settingbar';
-import syncIcon from '../icons/lucide/sync.svg';
-import userIcon from '../icons/lucide/user.svg';
-import globeIcon from '../icons/lucide/globe.svg';
-import hardDriveIcon from '../icons/lucide/hardDrive.svg';
-import timerIcon from '../icons/lucide/timer.svg';
+import syncIcon from '../assets/sync.svg';
+import userIcon from '../assets/user.svg';
+import globeIcon from '../assets/globe.svg';
+import hardDriveIcon from '../assets/hardDrive.svg';
+import timerIcon from '../assets/timer.svg';
 import { io } from 'socket.io-client';
 
 const socket = io('http://localhost:5000');

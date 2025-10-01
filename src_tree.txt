@@ -7,6 +7,30 @@ C:\ASAP_YUMIDAS\ASAP-YUMIDAS\SRC
 |   index.js
 |   styleguide.css
 |   
++---assets
+|       AI image.svg
+|       AiButton.svg
+|       bell.svg
+|       chatbotButton.svg
+|       CloseIcon.svg
+|       diversity.svg
+|       globe.svg
+|       hamburger.svg
+|       hard-drive.svg
+|       hardDrive.svg
+|       lettuce.svg
+|       logoutButton.svg
+|       profileIcon.svg
+|       smart farm image.svg
+|       spinach.svg
+|       sync.svg
+|       timer.svg
+|       user-round-pen.svg
+|       user.svg
+|       VegeAdd.svg
+|       warning.png
+|       wifi.svg
+|       
 +---components
 |   |   Clock.css
 |   |   Clock.jsx
@@ -62,95 +86,28 @@ C:\ASAP_YUMIDAS\ASAP-YUMIDAS\SRC
 |   |       OffWrapper.jsx
 |   |       style.css
 |   |       
-|   +---Swtich
+|   +---Switch
 |   |       Switch.css
 |   |       Switch.jsx
 |   |       
-|   +---TextLink
-|   |       style.css
-|   |       TextLink.jsx
-|   |       
-|   \---webpage
-|           AiGraph.jsx
-|           ArrowLeft.jsx
-|           ArrowLeft.module.css
-|           ArrowRight.jsx
-|           ArrowRight.module.css
-|           ArrowUpCircle.jsx
-|           ArrowUpCircle.module.css
-|           Button.jsx
-|           Button.module.css
-|           ChatListPanel.css
-|           ChatListPanel.jsx
-|           Footer.css
-|           Footer.jsx
-|           Header.css
-|           Header.jsx
-|           Heart.jsx
-|           Heart.module.css
-|           Pagination.jsx
-|           Pagination.module.css
-|           PaginationGap.jsx
-|           PaginationGap.module.css
-|           PaginationList.jsx
-|           PaginationList.module.css
-|           PaginationNext1.jsx
-|           PaginationNext1.module.css
-|           PaginationPage.jsx
-|           PaginationPage.module.css
-|           PaginationPrevious.jsx
-|           PaginationPrevious.module.css
-|           Selectvege.css
-|           Selectvege.jsx
-|           Star.jsx
-|           Star.module.css
-|           X.jsx
-|           X.module.css
+|   \---TextLink
+|           style.css
+|           TextLink.jsx
 |           
 +---hooks
-|   |   useActuatorControl.jsx
-|   |   useForecast.jsx
-|   |   useGraphData.jsx
-|   |   usePushNotification.jsx
-|   |   useSensorMonitor.jsx
-|   |   useSensorStatus.jsx
-|   |   useSummaryBox.jsx
-|   |   useWeather.jsx
-|   |   
-|   \---webpage
-|           usePriceTrend.jsx
-|           
+|       useActuatorControl.jsx
+|       useForecast.jsx
+|       useGraphData.jsx
+|       usePushNotification.jsx
+|       useSensorMonitor.jsx
+|       useSensorStatus.jsx
+|       useSummaryBox.jsx
+|       useWeather.jsx
+|       
 +---icons
-|   |   AI image.svg
-|   |   AiButton.svg
-|   |   CloseIcon.svg
-|   |   diversity.svg
-|   |   groceries 2.png
-|   |   lettuce.svg
-|   |   market image.svg
-|   |   smart farm image.svg
-|   |   spinach.svg
-|   |   VegeAdd.svg
-|   |   
-|   +---ChevronDown1
-|   |       ChevronDown1.jsx
-|   |       index.js
-|   |       
-|   \---lucide
-|           bell.svg
-|           chatbotButton.svg
-|           globe.svg
-|           hamburger.svg
-|           hard-drive.svg
-|           hardDrive.svg
-|           logoutButton.svg
-|           profileIcon.svg
-|           sync.svg
-|           timer.svg
-|           user-round-pen.svg
-|           user.svg
-|           warning.png
-|           wifi.svg
+|   \---ChevronDown1
+|           ChevronDown1.jsx
+|           index.js
 |           
 +---pages
 |   |   DataStatistics.css
@@ -182,41 +139,86 @@ C:\ASAP_YUMIDAS\ASAP-YUMIDAS\SRC
 |   |       Login.jsx
 |   |       style.css
 |   |       
-|   +---SignUp
-|   |       SignUp.jsx
-|   |       style.css
-|   |       
-|   \---webpage
-|           AdminPage.css
-|           AdminPage.jsx
-|           AiPrice.css
-|           AiPrice.jsx
-|           Chat.css
-|           Chat.jsx
-|           Detailpage.css
-|           Detailpage.jsx
-|           FindPWPage.css
-|           FindPWPage.jsx
-|           Homepage.css
-|           Homepage.jsx
-|           LoginPage.css
-|           LoginPage.jsx
-|           Market.jsx
-|           Market.module.css
-|           Mypage.css
-|           Mypage.jsx
-|           PaymentComplete.css
-|           PaymentComplete.jsx
-|           Paymentpage.css
-|           Paymentpage.jsx
-|           ProductImage.jsx
-|           Sellingpost.css
-|           Sellingpost.jsx
-|           SignUpPage.css
-|           SignUpPage.jsx
-|           SmartFarm.css
-|           SmartFarmList.jsx
+|   \---SignUp
+|           SignUp.jsx
+|           style.css
 |           
-\---utils
-        serialIdGenerator.js
-        
++---utils
+|       serialIdGenerator.js
+|       
+\---webpage
+    +---assets
+    |       groceries 2.png
+    |       market image.svg
+    |       
+    +---components
+    |       AiGraph.jsx
+    |       ArrowLeft.jsx
+    |       ArrowLeft.module.css
+    |       ArrowRight.jsx
+    |       ArrowRight.module.css
+    |       ArrowUpCircle.jsx
+    |       ArrowUpCircle.module.css
+    |       Button.jsx
+    |       Button.module.css
+    |       ChatListPanel.css
+    |       ChatListPanel.jsx
+    |       Footer.css
+    |       Footer.jsx
+    |       Header.css
+    |       Header.jsx
+    |       Heart.jsx
+    |       Heart.module.css
+    |       Pagination.jsx
+    |       Pagination.module.css
+    |       PaginationGap.jsx
+    |       PaginationGap.module.css
+    |       PaginationList.jsx
+    |       PaginationList.module.css
+    |       PaginationNext1.jsx
+    |       PaginationNext1.module.css
+    |       PaginationPage.jsx
+    |       PaginationPage.module.css
+    |       PaginationPrevious.jsx
+    |       PaginationPrevious.module.css
+    |       Selectvege.css
+    |       Selectvege.jsx
+    |       Star.jsx
+    |       Star.module.css
+    |       X.jsx
+    |       X.module.css
+    |       
+    +---hooks
+    |       usePriceTrend.jsx
+    |       
+    \---pages
+            AdminPage.css
+            AdminPage.jsx
+            AiPrice.css
+            AiPrice.jsx
+            Chat.css
+            Chat.jsx
+            Detailpage.css
+            Detailpage.jsx
+            FindPWPage.css
+            FindPWPage.jsx
+            Homepage.css
+            Homepage.jsx
+            LoginPage.css
+            LoginPage.jsx
+            Market.jsx
+            Market.module.css
+            Mypage.css
+            Mypage.jsx
+            PaymentComplete.css
+            PaymentComplete.jsx
+            Paymentpage.css
+            Paymentpage.jsx
+            ProductImage.jsx
+            Sellingpost.css
+            Sellingpost.jsx
+            SignUpPage.css
+            SignUpPage.jsx
+            SmartFarm.css
+            SmartFarmList.jsx
+            

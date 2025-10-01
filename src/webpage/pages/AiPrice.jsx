@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from "react";
 import './AiPrice.css';
 import Header from '../../webpage/components/Header';
-import lettuce from '../../icons/lettuce.svg';
-import spinach from '../../icons/spinach.svg';
+import lettuce from '../../assets/lettuce.svg';
+import spinach from '../../assets/spinach.svg';
 import usePriceTrend from '../../webpage/hooks/usePriceTrend';
 import AiGraph from '../../webpage/components/AiGraph';
 
