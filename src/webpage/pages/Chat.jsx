@@ -1,8 +1,8 @@
-// src/pages/webpage/Chat.jsx
+// src/webpage/pages/Chat.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { io } from "socket.io-client";
-import ArrowUpCircle from "../../components/webpage/ArrowUpCircle";
+import ArrowUpCircle from "../../webpage/components/ArrowUpCircle";
 import "./Chat.css";
 
 const API = import.meta.env?.VITE_API ?? "http://localhost:5000";

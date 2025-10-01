@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
-import Pagination from "../../components/webpage/Pagination";
-import Button from "../../components/webpage/Button";
-import ArrowUpCircle from "../../components/webpage/ArrowUpCircle";
-import ChatListPanel from "../../components/webpage/ChatListPanel";
+import Pagination from "../../webpage/components/Pagination";
+import Button from "../../webpage/components/Button";
+import ArrowUpCircle from "../../webpage/components/ArrowUpCircle";
+import ChatListPanel from "../../webpage/components/ChatListPanel";
 import styles from "./Market.module.css";
 
 const API = import.meta.env?.VITE_API ?? "http://localhost:5000";

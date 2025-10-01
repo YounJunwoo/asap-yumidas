@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './AdminPage.css';
-import Header from '../../components/webpage/Header';
+import Header from '../../webpage/components/Header';
 
 const AdminPage = () => {
   const [rows, setRows] = useState([]);

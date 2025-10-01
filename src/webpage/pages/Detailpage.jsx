@@ -1,6 +1,6 @@
-// src/pages/webpage/Detailpage.jsx
+// src/webpage/pages/Detailpage.jsx
 import "./Detailpage.css";
-import Header from "../../components/webpage/Header";
+import Header from "../../webpage/components/Header";
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 import './PaymentComplete.css';
-import Header from '../../components/webpage/Header';
+import Header from '../../webpage/components/Header';
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
 

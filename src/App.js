@@ -17,23 +17,23 @@ import PersonalInformation from './pages/PersonalInformation';
 import useSensorMonitor from './hooks/useSensorMonitor';
 
 // 웹페이지 컴포넌트
-import Homepage from './pages/webpage/Homepage';
-import Detailpage from './pages/webpage/Detailpage';
-import Sellingpost from './pages/webpage/Sellingpost';
-import Paymentpage from './pages/webpage/Paymentpage';
-import PaymentComplete from './pages/webpage/PaymentComplete';
-import Mypage from './pages/webpage/Mypage';
-import Market from './pages/webpage/Market';
+import Homepage from './webpage/pages/Homepage';
+import Detailpage from './webpage/pages/Detailpage';
+import Sellingpost from './webpage/pages/Sellingpost';
+import Paymentpage from './webpage/pages/Paymentpage';
+import PaymentComplete from './webpage/pages/PaymentComplete';
+import Mypage from './webpage/pages/Mypage';
+import Market from './webpage/pages/Market';
 // ⚠️ Chat 컴포넌트는 roomId 파라미터를 받도록 구현되어 있어야 함
-import Chat from './pages/webpage/Chat';
-import LoginPage from './pages/webpage/LoginPage';
-import SignUpPage from './pages/webpage/SignUpPage';
-import FindPWPage from './pages/webpage/FindPWPage';
-import AdminPage from './pages/webpage/AdminPage';
-import AiPrice from './pages/webpage/AiPrice';
-import SmartFarmList from './pages/webpage/SmartFarmList';
+import Chat from './webpage/pages/Chat';
+import LoginPage from './webpage/pages/LoginPage';
+import SignUpPage from './webpage/pages/SignUpPage';
+import FindPWPage from './webpage/pages/FindPWPage';
+import AdminPage from './webpage/pages/AdminPage';
+import AiPrice from './webpage/pages/AiPrice';
+import SmartFarmList from './webpage/pages/SmartFarmList';
 
-import Header from './components/webpage/Header';
+import Header from './webpage/components/Header';
 
 // ✅ API 베이스 통일 (localhost/127.0.0.1 혼용 금지!)
 const API = import.meta.env?.VITE_API ?? 'http://localhost:5000';

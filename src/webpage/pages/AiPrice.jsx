@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from "react";
 import './AiPrice.css';
-import Header from '../../components/webpage/Header';
+import Header from '../../webpage/components/Header';
 import lettuce from '../../icons/lettuce.svg';
 import spinach from '../../icons/spinach.svg';
-import usePriceTrend from '../../hooks/webpage/usePriceTrend';
-import AiGraph from '../../components/webpage/AiGraph';
+import usePriceTrend from '../../webpage/hooks/usePriceTrend';
+import AiGraph from '../../webpage/components/AiGraph';
 
 const AiPrice = () => {
   

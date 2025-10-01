@@ -1,5 +1,5 @@
 import './Paymentpage.css';
-import Header from '../../components/webpage/Header';
+import Header from '../../webpage/components/Header';
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 

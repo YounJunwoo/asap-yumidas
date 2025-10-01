@@ -1,6 +1,6 @@
 // src/pages/mypage/Mypage.jsx
 import "./Mypage.css";
-import Header from "../../components/webpage/Header";
+import Header from "../../webpage/components/Header";
 import ProductImage from "./ProductImage";
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";

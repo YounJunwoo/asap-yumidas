@@ -1,11 +1,11 @@
 import "./Homepage.css";
 import diversity from "../../icons/diversity.svg";
-import Header from "../../components/webpage/Header";
+import Header from "../../webpage/components/Header";
 import AI from "../../icons/AI image.svg";
 import market from "../../icons/market image.svg";
 import smartfarm from "../../icons/smart farm image.svg";
 import groceries from "../../icons/groceries 2.png";
-import Footer from "../../components/webpage/Footer";
+import Footer from "../../webpage/components/Footer";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 

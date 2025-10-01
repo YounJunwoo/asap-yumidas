@@ -1,5 +1,5 @@
 import './Sellingpost.css';
-import Header from '../../components/webpage/Header';
+import Header from '../../webpage/components/Header';
 import React, { useState, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 

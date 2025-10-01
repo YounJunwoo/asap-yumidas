@@ -1,7 +1,7 @@
-// src/pages/webpage/LoginPage.jsx  (경로는 프로젝트 구조에 맞춰 주세요)
+// src/webpage/pages/LoginPage.jsx  (경로는 프로젝트 구조에 맞춰 주세요)
 import { useState } from "react";
 import "./LoginPage.css";
-import Header from "../../components/webpage/Header";
+import Header from "../../webpage/components/Header";
 import { useNavigate } from "react-router-dom";
 
 export default function LoginPage({ onLogin }) {
