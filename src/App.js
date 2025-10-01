@@ -7,8 +7,8 @@ import { useState, useEffect } from 'react';
 import DashBoard from './pages/DashBoard/DashBoard';
 import Setting from './pages/Setting';
 import SettingAccount from './pages/SettingAccount';
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
+import NavBar from './components/NavBar';
+import SideBar from './components/SideBar';
 import DataStatistics from './pages/DataStatistics';
 import SettingNetwork from './pages/SettingNetwork';
 import SettingAdd from './pages/SettingAdd';
@@ -129,12 +129,12 @@ function App() {
   return (
     <div className={isDashboardRoute ? 'dashboard-layout' : ''}>
       {/* 대시보드 경로일 때만 Navbar & Sidebar 표시 */}
-      {isDashboardRoute && <Navbar onToggleSidebar={toggleSidebar} />}
+      {isDashboardRoute && <NavBar onToggleSidebar={toggleSidebar} />}
       <div className="layout-row">
         {isDashboardRoute && (
-          <Sidebar isOpen={window.innerWidth <= 1024 ? isSidebarOpen : true} />
+          <SideBar isOpen={window.innerWidth <= 1024 ? isSidebarOpen : true} />
         )}
-        <Header />
+        { !isDashboardRoute && <Header />}
         <div className={isDashboardRoute ? 'main-content' : 'website-main-content'}>
           <Routes>
             {/*  웹페이지 라우터 */}
