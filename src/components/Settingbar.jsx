@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './Settingbar.css';
-import userRoundPen from "../icons/lucide/user-round-pen.svg";
-import globeIcon from "../icons/lucide/globe.svg";
-import hardDriveIcon from "../icons/lucide/hardDrive.svg";
-import vegeAddIcon from "../icons/VegeAdd.svg";
+import userRoundPen from "../assets/user-round-pen.svg";
+import globeIcon from "../assets/globe.svg";
+import hardDriveIcon from "../assets/hardDrive.svg";
+import vegeAddIcon from "../assets/VegeAdd.svg";
 
 
 const Settingbar = () => {

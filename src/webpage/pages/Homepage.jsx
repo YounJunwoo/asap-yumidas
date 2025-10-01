@@ -1,10 +1,12 @@
+
 import "./HomePage.css";
-import diversity from "../../icons/diversity.svg";
-import AI from "../../icons/AI image.svg";
-import market from "../../icons/market image.svg";
-import smartfarm from "../../icons/smart farm image.svg";
-import groceries from "../../icons/groceries 2.png";
+import diversity from "../../assets/diversity.svg";
+import AI from "../../assets/AI image.svg";
+import market from "../../webpage/assets/market image.svg";
+import smartfarm from "../../assets/smart farm image.svg";
+import groceries from "../../webpage/assets/groceries 2.png";
 import Footer from "../components/Footer";
+
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 

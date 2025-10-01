@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './Chatting.css';
-import SendIcon from '../../icons/AiButton.svg';
+import SendIcon from '../../assets/AiButton.svg';
 
 const Chatting = () => {
   const location = useLocation();

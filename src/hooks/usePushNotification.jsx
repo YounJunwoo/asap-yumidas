@@ -1,6 +1,6 @@
 //경고 알림창 설정
 import { useEffect, useRef } from "react";
-import warning from "../icons/lucide/warning.png";
+import warning from "../assets/warning.png";
 
 const usePushNotification = () => {
   const notificationRef = useRef(null);

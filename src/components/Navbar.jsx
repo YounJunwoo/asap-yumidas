@@ -1,6 +1,6 @@
 import React from "react";
 import './Navbar.css';
-import hamburger from "../icons/lucide/hamburger.svg"
+import hamburger from "../assets/hamburger.svg"
 
 const Navbar = ({ onToggleSidebar }) => {
   

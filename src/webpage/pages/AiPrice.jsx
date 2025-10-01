@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import './AiPrice.css';
-import lettuce from '../../icons/lettuce.svg';
-import spinach from '../../icons/spinach.svg';
+import lettuce from '../assets/lettuce.svg';
+import spinach from '../assets/spinach.svg';
 import usePriceTrend from '../hooks/usePriceTrend';
 import AiGraph from '../components/AiGraph';
 
