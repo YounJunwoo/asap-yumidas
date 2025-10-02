@@ -1,4 +1,4 @@
-import './PaymentPage.css';
+import './Paymentpage.css';
 import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 

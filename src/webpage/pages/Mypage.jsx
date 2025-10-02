@@ -1,5 +1,5 @@
 // src/pages/mypage/Mypage.jsx
-import "./MyPage.css";
+import "./Mypage.css";
 import ProductImage from "./ProductImage";
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";

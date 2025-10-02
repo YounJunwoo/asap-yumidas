@@ -1,5 +1,5 @@
 
-import "./HomePage.css";
+import "./Homepage.css";
 import diversity from "../../assets/diversity.svg";
 import AI from "../../webpage/assets/analyze.png";
 import market from "../../webpage/assets/market.png";

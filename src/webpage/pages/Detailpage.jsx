@@ -1,5 +1,5 @@
 // src/webpage/pages/Detailpage.jsx
-import "./DetailPage.css";
+import "./Detailpage.css";
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 

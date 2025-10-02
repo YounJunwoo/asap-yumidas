@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './SettingNetwork.css';
-import Settingbar from '../components/SettingBar';
+import Settingbar from '../components/Settingbar';
 import wifi from '../assets/wifi.svg';
 import Switch from '../components/Switch/Switch';
 

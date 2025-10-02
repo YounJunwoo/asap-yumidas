@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './SettingAccount.css';
-import Settingbar from '../components/SettingBar';
+import Settingbar from '../components/Settingbar';
 
 const SettingAccount = () => {
   const [accounts, setAccounts] = useState([]);

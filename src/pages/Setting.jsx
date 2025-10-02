@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Setting.css';
 import { Link } from 'react-router-dom';
 import profileIcon from '../assets/profileIcon.svg';
-import SettingBar from '../components/SettingBar';
+import Settingbar from '../components/Settingbar';
 import syncIcon from '../assets/sync.svg';
 import userIcon from '../assets/user.svg';
 import globeIcon from '../assets/globe.svg';
@@ -70,7 +70,7 @@ const Setting = () => {
 
   return (
     <div className="settingbar-row">
-      <SettingBar />
+      <Settingbar />
       <div className="setting-container">
         <div className="profileBox">
           <img src={profileIcon} alt="프로필" className="profileIcon" />

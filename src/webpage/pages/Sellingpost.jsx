@@ -1,4 +1,4 @@
-import './SellingPost.css';
+import './Sellingpost.css';
 import React, { useState, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 

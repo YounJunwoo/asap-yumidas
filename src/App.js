@@ -7,8 +7,8 @@ import { useState, useEffect } from 'react';
 import DashBoard from './pages/DashBoard/DashBoard';
 import Setting from './pages/Setting';
 import SettingAccount from './pages/SettingAccount';
-import NavBar from './components/NavBar';
-import SideBar from './components/SideBar';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 import DataStatistics from './pages/DataStatistics';
 import SettingNetwork from './pages/SettingNetwork';
 import Chatting from './pages/Chatting/Chatting';
@@ -17,11 +17,11 @@ import useSensorMonitor from './hooks/useSensorMonitor';
 import DetectPestPage from './pages/DetectPestPage';
 
 // 웹페이지 컴포넌트
-import HomePage from './webpage/pages/HomePage';
-import DetailPage from './webpage/pages/DetailPage';
-import SellingPost from './webpage/pages/SellingPost';
-import PaymentPage from './webpage/pages/PaymentPage';
-import MyPage from './webpage/pages/MyPage';
+import HomePage from './webpage/pages/Homepage';
+import DetailPage from './webpage/pages/Detailpage';
+import SellingPost from './webpage/pages/Sellingpost';
+import PaymentPage from './webpage/pages/Paymentpage';
+import MyPage from './webpage/pages/Mypage';
 import Market from './webpage/pages/Market';
 // ⚠️ Chat 컴포넌트는 roomId 파라미터를 받도록 구현되어 있어야 함
 import Chat from './webpage/pages/Chat';
@@ -129,10 +129,10 @@ function App() {
   return (
     <div className={isDashboardRoute ? 'dashboard-layout' : ''}>
       {/* 대시보드 경로일 때만 Navbar & Sidebar 표시 */}
-      {isDashboardRoute && <NavBar onToggleSidebar={toggleSidebar} />}
+      {isDashboardRoute && <Navbar onToggleSidebar={toggleSidebar} />}
       <div className="layout-row">
         {isDashboardRoute && (
-          <SideBar isOpen={window.innerWidth <= 1024 ? isSidebarOpen : true} />
+          <Sidebar isOpen={window.innerWidth <= 1024 ? isSidebarOpen : true} />
         )}
         
         <div className={isDashboardRoute ? 'main-content' : 'website-main-content'}>

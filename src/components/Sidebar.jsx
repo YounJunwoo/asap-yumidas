@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './SideBar.css';
+import './Sidebar.css';
 import logoutButton from '../assets/logoutButton.svg';
 
 const SideBar = ({ isOpen }) => {

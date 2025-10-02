@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './PersonalInformation.css';
-import Settingbar from '../components/SettingBar'; // 실제 위치에 따라 경로 조정
+import Settingbar from '../components/Settingbar'; // 실제 위치에 따라 경로 조정
 
 const PersonalInformation = () => {
   const [userInfo, setUserInfo] = useState({

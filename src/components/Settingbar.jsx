@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './SettingBar.css';
+import './Settingbar.css';
 import userRoundPen from "../assets/user-round-pen.svg";
 import globeIcon from "../assets/globe.svg";
 import hardDriveIcon from "../assets/hardDrive.svg";

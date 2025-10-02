@@ -1,4 +1,4 @@
-import './NavBar.css';
+import './Navbar.css';
 import hamburger from "../assets/hamburger.svg"
 import { useNavigate } from "react-router-dom";
 
