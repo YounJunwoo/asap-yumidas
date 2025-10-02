@@ -7,7 +7,6 @@ import syncIcon from '../assets/sync.svg';
 import userIcon from '../assets/user.svg';
 import globeIcon from '../assets/globe.svg';
 import hardDriveIcon from '../assets/hardDrive.svg';
-import timerIcon from '../assets/timer.svg';
 import { io } from 'socket.io-client';
 
 const socket = io('http://localhost:5000');

@@ -1,8 +1,7 @@
-// src/webpage/pages/Chat.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { io } from "socket.io-client";
-import ArrowUpCircle from "../../webpage/components/ArrowUpCircle";
+import ArrowUpCircle from "../components/ArrowUpCircle";
 import "./Chat.css";
 
 const API = import.meta.env?.VITE_API ?? "http://localhost:5000";
@@ -226,7 +225,13 @@ export default function Chat() {
     }
   };
 
-  const handlePay = () => navigate("/payment");
+  const handlePay = () => {
+    if (product?.id) {
+      navigate(`/payment/${product.id}`, { state: { product } });
+    } else {
+      alert("상품 정보를 찾을 수 없습니다.");
+    }
+  };
 
   // === 렌더 가드 ===
   if (!authReady) {

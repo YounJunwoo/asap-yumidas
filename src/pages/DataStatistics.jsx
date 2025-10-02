@@ -1,7 +1,7 @@
 // src/pages/DataStatistics.jsx
 import './DataStatistics.css';
 import DataBox from '../components/DataBox';
-import Graph from '../components/copy_Graph';
+import Graph from '../components/Graph';
 import useGraphData from '../hooks/useGraphData';
 import useSummaryBox from '../hooks/useSummaryBox';
 

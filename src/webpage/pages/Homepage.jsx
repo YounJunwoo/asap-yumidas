@@ -1,9 +1,9 @@
 
 import "./HomePage.css";
 import diversity from "../../assets/diversity.svg";
-import AI from "../../assets/AI image.svg";
-import market from "../../webpage/assets/market image.svg";
-import smartfarm from "../../assets/smart farm image.svg";
+import AI from "../../webpage/assets/analyze.png";
+import market from "../../webpage/assets/market.png";
+import smartfarm from "../../webpage/assets/smart-farm.png";
 import groceries from "../../webpage/assets/groceries 2.png";
 import Footer from "../components/Footer";
 

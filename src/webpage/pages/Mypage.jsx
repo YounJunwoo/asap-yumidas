@@ -163,7 +163,7 @@ const MyPage = () => {
   };
 
   const handleTabChange = (tab) => setActiveTab(tab);
-  const handleEditProfile = () => alert("프로필 편집은 준비 중입니다.");
+  const handleEditProfile = () => navigate("/mypage/update");
   const handleChat = () => navigate("/chat");
   const handleAdmin = () => navigate("/admin");
 

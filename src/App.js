@@ -31,8 +31,8 @@ import FindPWPage from './webpage/pages/FindPWPage';
 import AdminPage from './webpage/pages/AdminPage';
 import AiPrice from './webpage/pages/AiPrice';
 import SmartFarmList from './webpage/pages/SmartFarmList';
-
 import Header from './webpage/components/Header';
+import UpdatingInfo from './webpage/pages/UpdatingInfo';
 
 // ✅ API 베이스 통일 (localhost/127.0.0.1 혼용 금지!)
 const API = import.meta.env?.VITE_API ?? 'http://localhost:5000';
@@ -134,8 +134,9 @@ function App() {
         {isDashboardRoute && (
           <SideBar isOpen={window.innerWidth <= 1024 ? isSidebarOpen : true} />
         )}
-        { !isDashboardRoute && <Header />}
+        
         <div className={isDashboardRoute ? 'main-content' : 'website-main-content'}>
+          { !isDashboardRoute && !['/login', '/signup', '/findpw'].includes(location.pathname) && <Header /> }
           <Routes>
             {/*  웹페이지 라우터 */}
             <Route
@@ -183,6 +184,7 @@ function App() {
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/findpw" element={<FindPWPage />} />
             <Route path="/admin" element={<AdminPage />} />
+            <Route path="/mypage/update" element={<UpdatingInfo />} />
 
             {/* 대시보드 라우터 */}
             <Route path="/smartfarm/:serial" element={<DashBoard />} />
